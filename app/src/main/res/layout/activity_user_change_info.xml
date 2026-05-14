@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 顶部区域：背景 + 头像 + 昵称 -->
+        <RelativeLayout
+            android:id="@+id/profile_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_profile_background"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_sheet_background" />
+
+            <!-- 设置按钮移到右上角 -->
+            <ImageView
+                android:id="@+id/iv_change_settings"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignTop="@id/iv_profile_background"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="12dp"
+                android:padding="8dp"
+                 />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_avatar"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_below="@id/iv_profile_background"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="-45dp"
+                android:elevation="8dp"
+                app:cardCornerRadius="45dp">
+
+                <ImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_avatar" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- 昵称 + 性别 水平排列 -->
+            <LinearLayout
+                android:id="@+id/layout_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_profile_background"
+                android:layout_toEndOf="@id/card_avatar"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="用户昵称"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/iv_sex"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_sex_secret" />
+
+            </LinearLayout>
+
+            <!-- 地址信息：图标 + 文字 水平排列 -->
+            <LinearLayout
+                android:id="@+id/layout_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_nickname"
+                android:layout_alignStart="@id/layout_nickname"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_address"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/ic_address"
+                    app:tint="?android:attr/textColorSecondary" />
+
+                <TextView
+                    android:id="@+id/tv_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="北京市"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- 头像卡片 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="头像"
+                            android:textSize="16sp"
+                            android:textColor="#333333" />
+
+                        <TextView
+                            android:id="@+id/tv_avatar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="点击更换 >"
+                            android:textSize="14sp"
+                            android:textColor="#999999" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- 背景图卡片 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="背景图"
+                            android:textSize="16sp"
+                            android:textColor="#333333" />
+
+                        <TextView
+                            android:id="@+id/tv_background"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="点击更换 >"
+                            android:textSize="14sp"
+                            android:textColor="#999999" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- 基本信息卡片 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- 账号 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingVertical="12dp">
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:text="账号"
+                                android:textSize="16sp"
+                                android:textColor="#333333" />
+
+                            <TextView
+                                android:id="@+id/tv_account"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:text="user123456"
+                                android:textSize="14sp"
+                                android:textColor="#666666" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#EEEEEE" />
+
+                        <!-- 昵称 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingVertical="12dp">
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:text="昵称"
+                                android:textSize="16sp"
+                                android:textColor="#333333" />
+
+                            <EditText
+                                android:id="@+id/et_nickname"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:gravity="end"
+                                android:hint="请输入昵称"
+                                android:textSize="14sp"
+                                android:textColor="#666666"
+                                android:textColorHint="#999999"
+                                android:maxLines="1"
+                                android:inputType="text" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#EEEEEE" />
+
+                        <!-- 性别 -->
+                        <LinearLayout
+                            android:id="@+id/ll_gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingVertical="12dp">
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:text="性别"
+                                android:textSize="16sp"
+                                android:textColor="#333333" />
+
+
+
+                            <EditText
+                                android:id="@+id/et_gender"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:gravity="end"
+                                android:hint="请输入性别"
+                                android:textSize="14sp"
+                                android:textColor="#666666"
+                                android:textColorHint="#999999"
+                                android:maxLines="1"
+                                android:inputType="text" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- 密码卡片 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- 原密码 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingVertical="12dp">
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:text="原密码"
+                                android:textSize="16sp"
+                                android:textColor="#333333" />
+
+                            <EditText
+                                android:id="@+id/et_old_password"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:gravity="end"
+                                android:hint="请输入原密码"
+                                android:textSize="14sp"
+                                android:textColor="#666666"
+                                android:textColorHint="#999999"
+                                android:maxLines="1"
+                                android:inputType="textPassword" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#EEEEEE" />
+
+                        <!-- 新密码 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingVertical="12dp">
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:text="新密码"
+                                android:textSize="16sp"
+                                android:textColor="#333333" />
+
+                            <EditText
+                                android:id="@+id/et_new_password"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:gravity="end"
+                                android:hint="请输入新密码"
+                                android:textSize="14sp"
+                                android:textColor="#666666"
+                                android:textColorHint="#999999"
+                                android:maxLines="1"
+                                android:inputType="textPassword" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#EEEEEE" />
+
+                        <!-- 确认密码 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingVertical="12dp">
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:text="确认密码"
+                                android:textSize="16sp"
+                                android:textColor="#333333" />
+
+                            <EditText
+                                android:id="@+id/et_confirm_password"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:gravity="end"
+                                android:hint="请再次输入新密码"
+                                android:textSize="14sp"
+                                android:textColor="#666666"
+                                android:textColorHint="#999999"
+                                android:maxLines="1"
+                                android:inputType="textPassword" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- 地址卡片 --><androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="地区"
+                        android:textSize="16sp"
+                        android:textColor="#333333" />
+
+
+
+                    <EditText
+                        android:id="@+id/et_region"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="end"
+                        android:hint="请输入省市"
+                        android:textSize="14sp"
+                        android:textColor="#666666"
+                        android:textColorHint="#999999"
+                        android:maxLines="1"
+                        android:inputType="text" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+                <!-- 两个横向按钮 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <!-- 保存按钮 -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/tv_logout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="16dp"
+                            android:text="退出登录"
+
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- 退出登录按钮 -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0dp"
+                        >
+
+
+
+                        <TextView
+                            android:id="@+id/tv_save"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="16dp"
+                            android:text="保存"
+
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/signup_tb_back"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:contentInsetStartWithNavigation="20dp"
+            app:navigationIcon="@drawable/back"
+            app:navigationIconTint="@color/day_on_background"
+            app:title="">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="注册账号"
+                android:textColor="@color/day_on_background"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- 头像 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:layout_marginTop="?attr/actionBarSize"
+            app:cardCornerRadius="52dp"
+            app:cardBackgroundColor="@color/day_accent_gold"
+            app:cardElevation="0dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:id="@+id/signup_iv_avatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/avatar" />
+            </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 昵称输入 -->
+        <EditText
+            android:id="@+id/signup_et_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="32dp"
+            android:background="@null"
+            android:gravity="center"
+            android:hint="请输入昵称"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:textColor="@color/day_on_background"
+            android:textColorHint="@color/day_text_hint"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+        <!-- 账号 -->
+        <EditText
+            android:id="@+id/signup_et_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:background="@drawable/edit_logon_bg"
+            android:drawableLeft="@drawable/icon_login"
+            android:drawablePadding="20dp"
+            android:drawableTint="@color/day_primary"
+            android:hint="请输入账号"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="@color/day_on_surface"
+            android:textColorHint="@color/day_text_hint" />
+
+        <!-- 密码 -->
+        <EditText
+            android:id="@+id/signup_et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_logon_bg"
+            android:drawableLeft="@drawable/icon_password"
+            android:drawablePadding="20dp"
+            android:drawableTint="@color/day_secondary"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColor="@color/day_on_surface"
+            android:textColorHint="@color/day_text_hint" />
+
+        <!-- 性别选择 -->
+        <RadioGroup
+            android:id="@+id/signup_rg_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_logon_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <RadioButton
+                android:id="@+id/signup_rb_male"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/day_tertiary"
+                android:text="男"
+                android:textColor="@color/day_on_surface" />
+
+            <RadioButton
+                android:id="@+id/signup_rb_female"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/day_secondary"
+                android:text="女"
+                android:textColor="@color/day_on_surface" />
+
+            <RadioButton
+                android:id="@+id/signup_rb_secret"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/day_primary"
+                android:checked="true"
+                android:text="保密"
+                android:textColor="@color/day_on_surface" />
+        </RadioGroup>
+
+        <!-- 按钮区 -->
+        <LinearLayout
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/signup_btn_submit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_logon_bg"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="提交注册"
+                android:textColor="@color/day_accent_gold" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="24dp" />
+
+    </LinearLayout>
+
+</ScrollView>

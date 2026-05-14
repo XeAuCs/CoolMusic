@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <!-- =======================
+         Day (日间)：浅紫 + 浅蓝 + 浅蓝紫 + 金
+         ======================= -->
+
+    <!-- 主色：浅蓝紫（柔和的薰衣草蓝紫，用于Toolbar背景、主要按钮） -->
+    <color name="day_primary">#B9B8DA</color>
+    <!-- 主色深一点：用于状态栏、按下态 -->
+    <color name="day_primary_variant">#8A9AEF</color>
+    <!-- 主色上的文字/图标 -->
+    <color name="day_on_primary">#2C326E</color>
+
+    <!-- 次要色：浅紫（用于次要按钮、标签、辅助元素） -->
+    <color name="day_secondary">#A7A1E7</color>
+    <color name="day_secondary_variant">#A78BFA</color>
+    <color name="day_on_secondary">#9374DC</color>
+
+    <!-- 第三色：浅蓝（用于信息提示、链接、部分图标） -->
+    <color name="day_tertiary">#93C5FD</color>
+    <color name="day_tertiary_variant">#60A5FA</color>
+    <color name="day_on_tertiary">#1A1B2E</color>
+
+    <!-- 强调色：金色（用于点缀：高亮、选中态、重要按钮、进度条） -->
+    <color name="day_accent_gold">#FBBF24</color>
+    <color name="day_accent_gold_variant">#F59E0B</color>
+    <color name="day_on_gold">#1A1B2E</color>
+
+    <!-- 背景/表面：白与淡蓝紫白 -->
+    <color name="day_background">#FAFBFF</color>
+    <color name="day_surface">#FFFFFF</color>
+    <!-- 轻微的分层底色：淡蓝紫调 -->
+    <color name="day_surface_tint">#F0F4FF</color>
+    <!-- 卡片表面：略带蓝紫调的白 -->
+    <color name="day_surface_container">#F5F7FF</color>
+
+    <!-- 文本颜色 -->
+    <color name="day_on_background">#1A1B2E</color>
+    <color name="day_on_surface">#1A1B2E</color>
+    <color name="day_text_secondary">#6B7280</color>
+    <color name="day_text_hint">#9CA3AF</color>
+
+    <!-- 分割线/描边：淡蓝紫调 -->
+    <color name="day_divider">#E0E7FF</color>
+    <color name="day_outline">#C7D2FE</color>
+
+    <!-- 渐变色（可用于特殊背景、按钮渐变） -->
+    <color name="day_gradient_start">#C4B5FD</color>  <!-- 浅紫 -->
+    <color name="day_gradient_middle">#A8B4FF</color> <!-- 浅蓝紫 -->
+    <color name="day_gradient_end">#93C5FD</color>    <!-- 浅蓝 -->
+
+
+    <!-- =======================
+         Night (夜间)：深蓝紫 + 深蓝 + 深紫 + 金
+         ======================= -->
+
+    <!-- 主色：深蓝紫（Toolbar、主要按钮） -->
+    <color name="night_primary">#6366F1</color>
+    <!-- 更深：用于状态栏、按下态 -->
+    <color name="night_primary_variant">#4F46E5</color>
+    <!-- 深蓝紫上的文字：用浅色 -->
+    <color name="night_on_primary">#FFFFFF</color>
+
+    <!-- 次要色：中紫（夜间辅助元素） -->
+    <color name="night_secondary">#8B5CF6</color>
+    <color name="night_secondary_variant">#7C3AED</color>
+    <color name="night_on_secondary">#FFFFFF</color>
+
+    <!-- 第三色：中蓝（夜间信息提示、链接） -->
+    <color name="night_tertiary">#3B82F6</color>
+    <color name="night_tertiary_variant">#2563EB</color>
+    <color name="night_on_tertiary">#FFFFFF</color>
+
+    <!-- 强调色：金色（夜间点缀，稍亮一些更醒目） -->
+    <color name="night_accent_gold">#FCD34D</color>
+    <color name="night_accent_gold_variant">#FBBF24</color>
+    <color name="night_on_gold">#1A1B2E</color>
+
+    <!-- 夜间背景/表面：深蓝灰调 -->
+    <color name="night_background">#0F1119</color>
+    <color name="night_surface">#1A1D2E</color>
+    <!-- 表面再抬一层：带蓝紫调的深色 -->
+    <color name="night_surface_tint">#252942</color>
+    <color name="night_surface_container">#1F2337</color>
+
+    <!-- 文本颜色（夜间主文字/次级文字） -->
+    <color name="night_on_background">#E8EAFC</color>
+    <color name="night_on_surface">#E8EAFC</color>
+    <color name="night_text_secondary">#A5B4FC</color>
+    <color name="night_text_hint">#6B7DB8</color>
+
+    <!-- 分割线/描边（夜间） -->
+    <color name="night_divider">#2D3250</color>
+    <color name="night_outline">#3D4466</color>
+
+    <!-- 夜间渐变色 -->
+    <color name="night_gradient_start">#8B5CF6</color>  <!-- 紫 -->
+    <color name="night_gradient_middle">#6366F1</color> <!-- 蓝紫 -->
+    <color name="night_gradient_end">#3B82F6</color>    <!-- 蓝 -->
+
+
+
+
+    <color name="background_primary">#C17D7D</color>    <!-- 蓝 -->
+    <color name="divider">#73A5FB</color>    <!-- 蓝 -->
+    <color name="text_primary">#000000</color>    <!-- 蓝 -->
+
+
+
+
+
+    <!-- =======================
+         通用功能色（昼夜通用）
+         ======================= -->
+
+    <!-- 错误/警告/成功/信息 -->
+    <color name="color_error">#EF4444</color>
+    <color name="color_error_light">#FCA5A5</color>
+    <color name="color_success">#22C55E</color>
+    <color name="color_success_light">#86EFAC</color>
+    <color name="color_warning">#F59E0B</color>
+    <color name="color_warning_light">#FCD34D</color>
+    <color name="color_info">#3B82F6</color>
+    <color name="color_info_light">#93C5FD</color>
+
+    <!-- 播放器专用色（音乐App可能用到） -->
+    <color name="player_progress">#FBBF24</color>          <!-- 金色进度条 -->
+    <color name="player_progress_bg">#E0E7FF</color>       <!-- 日间进度条背景 -->
+    <color name="player_progress_bg_night">#2D3250</color> <!-- 夜间进度条背景 -->
+
+
+    <!-- =====================
+             播放器文字颜色（日间）
+             ===================== -->
+    <!-- 歌曲标题：使用 day_on_surface，高对比度 -->
+    <color name="player_title_day">@color/day_on_surface</color>
+    <!-- 艺术家名：使用 day_text_secondary，稍淡 -->
+    <color name="player_artist_day">@color/day_text_secondary</color>
+    <!-- 时间文字：使用 day_text_hint -->
+    <color name="player_time_day">@color/day_text_hint</color>
+
+    <!-- =====================
+         播放器文字颜色（夜间）
+         ===================== -->
+    <color name="player_title_night">@color/night_on_surface</color>
+    <color name="player_artist_night">@color/night_text_secondary</color>
+    <color name="player_time_night">@color/night_text_hint</color>
+
+    <!-- =====================
+         播放器控件颜色
+         ===================== -->
+    <!-- 主要控件（播放/暂停）：金色强调 -->
+    <color name="player_control_primary">@color/day_accent_gold</color>
+    <color name="player_control_primary_night">@color/night_accent_gold</color>
+
+    <!-- 次要控件（上/下一首）：跟随主题 -->
+    <color name="player_control_secondary_day">@color/day_on_surface</color>
+    <color name="player_control_secondary_night">@color/night_on_surface</color>
+
+    <!-- 辅助控件（循环、列表）：使用次要色 -->
+    <color name="player_control_tertiary_day">@color/day_secondary</color>
+    <color name="player_control_tertiary_night">@color/night_secondary</color>
+
+    <!-- =====================
+         封面边框颜色
+         ===================== -->
+    <color name="player_cover_border_day">@color/day_accent_gold</color>
+    <color name="player_cover_border_night">@color/night_accent_gold</color>
+
+    <!-- 封面阴影/光晕 -->
+    <color name="player_cover_glow_day">#40FBBF24</color>  <!-- 40% 透明金色 -->
+    <color name="player_cover_glow_night">#40FCD34D</color>
+
+    <!-- =====================
+         进度条颜色（补充）
+         ===================== -->
+    <!-- 已播放进度：金色 -->
+    <color name="player_seekbar_progress">@color/player_progress</color>
+    <!-- 缓冲进度：半透明金色 -->
+    <color name="player_seekbar_buffer">#80FBBF24</color>
+    <!-- 背景轨道 - 日间 -->
+    <color name="player_seekbar_bg_day">@color/day_divider</color>
+    <!-- 背景轨道 - 夜间 -->
+    <color name="player_seekbar_bg_night">@color/night_divider</color>
+
+    <!-- =====================
+         歌词颜色
+         ===================== -->
+    <!-- 当前歌词行 - 金色高亮 -->
+    <color name="lyric_current_day">@color/day_accent_gold</color>
+    <color name="lyric_current_night">@color/night_accent_gold</color>
+    <!-- 普通歌词行 -->
+    <color name="lyric_normal_day">@color/day_text_secondary</color>
+    <color name="lyric_normal_night">@color/night_text_secondary</color>
+    <!-- 已播放歌词 -->
+    <color name="lyric_past_day">@color/day_text_hint</color>
+    <color name="lyric_past_night">@color/night_text_hint</color>
+
+    <!-- =====================
+         喜欢按钮状态颜色
+         ===================== -->
+    <color name="like_active">@color/color_error</color>  <!-- 红心 -->
+    <color name="like_inactive_day">@color/day_text_hint</color>
+    <color name="like_inactive_night">@color/night_text_hint</color>
+
+
+
+</resources>

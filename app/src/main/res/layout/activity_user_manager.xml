@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    tools:context=".activity.user.UserManagerActivity">
+
+    <!-- 主内容区域 - Fragment 容器 -->
+    <FrameLayout
+        android:id="@+id/user_fl_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="56dp"
+        android:background="?android:attr/colorBackground" />
+
+    <!-- 底部播放卡片 - 悬浮在内容之上 -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/user_card_player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginBottom="80dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_anchor="@id/user_bn_menu"
+        app:layout_anchorGravity="top|center_horizontal"
+        android:elevation="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="?attr/colorSurface">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- 歌曲信息 + 播放控制 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp">
+
+                <!-- 封面 -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="50dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="?attr/colorPrimary">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_margin="2dp"
+                        app:cardBackgroundColor="?attr/colorPrimary"
+                        app:cardCornerRadius="24dp"
+                        app:cardElevation="3dp">
+
+                        <ImageView
+                            android:id="@+id/user_iv_album"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/icon_default_cover_image"
+                            android:scaleType="centerCrop"
+                            android:background="?attr/colorPrimary" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- 歌曲名称 + 歌手 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="12dp">
+
+                    <TextView
+                        android:id="@+id/user_tv_song_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="歌曲名称"
+                        android:textSize="16sp"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:maxLines="1"
+                        android:ellipsize="end" />
+
+                    <TextView
+                        android:id="@+id/user_tv_artist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="歌手"
+                        android:textSize="14sp"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:maxLines="1"
+                        android:ellipsize="end" />
+                </LinearLayout>
+
+                <!-- 播放 + 下一首 -->
+                <ImageView
+                    android:id="@+id/user_iv_play"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_play_arrow"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="播放" />
+
+                <ImageView
+                    android:id="@+id/user_iv_next"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_skip_next"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="下一首" />
+
+            </LinearLayout>
+
+            <!-- 进度条 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/user_tv_current_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minEms="3"
+                    android:gravity="end"
+                    android:text="00:00"
+                    android:textSize="12sp"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:includeFontPadding="false" />
+
+                <SeekBar
+                    android:id="@+id/user_seekbar_progress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="1000"
+                    android:progress="300"
+                    android:progressTint="?attr/colorPrimary"
+                    android:thumbTint="?attr/colorPrimary"
+                    android:progressBackgroundTint="?attr/colorControlNormal" />
+
+                <TextView
+                    android:id="@+id/user_tv_total_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minEms="3"
+                    android:gravity="start"
+                    android:text="00:00"
+                    android:textSize="12sp"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:includeFontPadding="false" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- 底部导航栏 -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/user_bn_menu"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:background="?attr/colorSurface"
+        app:menu="@menu/menu_user_bn_menu"
+        app:itemIconTint="@color/bn_item_color"
+        app:itemTextColor="@color/bn_item_color"
+        app:itemRippleColor="@color/bn_item_ripple" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@android:color/transparent">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="?attr/colorPrimary">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.7">
+
+                <ImageView
+                    android:id="@+id/iv_sheet_cover"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_sheet_background"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- 渐变遮罩层 -->
+                <View
+                    android:id="@+id/view_gradient_mask"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/gradient_bottom_fade"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <!-- 编辑按钮 - 放到歌单名称右边 -->
+                <ImageView
+                    android:id="@+id/iv_edit"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="15dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_change"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_sheet_name" />
+
+                <!-- 歌单名称 -->
+                <TextView
+                    android:id="@+id/tv_sheet_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="75dp"
+                    android:layout_marginEnd="8dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="歌单名称"
+                    android:textSize="40sp"
+                    app:layout_constraintEnd_toStartOf="@id/iv_edit"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- 作者头像 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_owner_avatar"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintStart_toStartOf="@id/tv_sheet_name"
+                    app:layout_constraintTop_toBottomOf="@id/tv_sheet_name">
+
+                    <ImageView
+                        android:id="@+id/iv_owner_avatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/default_avatar" />
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- 作者名称 -->
+                <TextView
+                    android:id="@+id/tv_owner_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:maxWidth="180dp"
+                    android:text="作者名称"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/cv_owner_avatar"
+                    app:layout_constraintStart_toEndOf="@id/cv_owner_avatar"
+                    app:layout_constraintTop_toTopOf="@id/cv_owner_avatar" />
+
+                <!-- 私人歌单标识 -->
+                <TextView
+                    android:id="@+id/tv_private_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:text="未公开"
+                    android:textSize="12sp"
+                    android:textColor="#99FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_owner_name"
+                    app:layout_constraintStart_toEndOf="@id/tv_owner_name"
+                    app:layout_constraintTop_toTopOf="@id/tv_owner_name" />
+
+                <!-- 歌单描述 -->
+                <TextView
+                    android:id="@+id/tv_sheet_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="对歌单的描述"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/cv_owner_avatar"
+                    app:layout_constraintTop_toBottomOf="@id/cv_owner_avatar" />
+
+                <!-- 底部信息行：歌曲数量 + 播放次数 + 全部播放按钮 -->
+                <TextView
+                    android:id="@+id/tv_song_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50首"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/cv_play_all"
+                    app:layout_constraintStart_toStartOf="@id/tv_sheet_description"
+                    app:layout_constraintTop_toTopOf="@id/cv_play_all" />
+
+                <!-- 分隔点 -->
+                <TextView
+                    android:id="@+id/tv_divider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="·"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_song_count"
+                    app:layout_constraintStart_toEndOf="@id/tv_song_count"
+                    app:layout_constraintTop_toTopOf="@id/tv_song_count" />
+
+                <!-- 播放量 -->
+                <TextView
+                    android:id="@+id/tv_play_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="播放 277.6万"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_song_count"
+                    app:layout_constraintStart_toEndOf="@id/tv_divider"
+                    app:layout_constraintTop_toTopOf="@id/tv_song_count" />
+
+                <!-- 全部播放按钮 - 放到右边 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_play_all"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="20dp"
+                    app:cardBackgroundColor="#33FFFFFF"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_sheet_description">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="全部播放"
+                        android:textSize="13sp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- 固定的 Toolbar -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- 歌单列表 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_music_playlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/colorBackground"
+        android:clipToPadding="false"
+        android:padding="12dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

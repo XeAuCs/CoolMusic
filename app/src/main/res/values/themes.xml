@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 日间主题：浅紫 + 浅蓝 + 浅蓝紫 + 金 -->
+    <style name="Theme.CoolMusic" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- 主色：浅蓝紫（Toolbar 背景、主要按钮、强调区域） -->
+        <item name="colorPrimary">@color/day_primary</item>
+        <item name="colorPrimaryVariant">@color/day_primary_variant</item>
+        <item name="colorOnPrimary">@color/day_on_primary</item>
+
+        <!-- 次要色：浅紫（次要按钮、标签、辅助元素） -->
+        <item name="colorSecondary">@color/day_secondary</item>
+        <item name="colorSecondaryVariant">@color/day_secondary_variant</item>
+        <item name="colorOnSecondary">@color/day_on_secondary</item>
+
+        <!-- 第三色（Material3 支持）：浅蓝 -->
+        <!-- <item name="colorTertiary">@color/day_tertiary</item> -->
+        <!-- <item name="colorOnTertiary">@color/day_on_tertiary</item> -->
+
+        <!-- 背景色 -->
+        <item name="android:colorBackground">@color/day_background</item>
+        <item name="android:windowBackground">@color/day_background</item>
+
+        <!-- 表面色（Card、Dialog、BottomSheet 等） -->
+        <item name="colorSurface">@color/day_surface</item>
+        <item name="colorOnSurface">@color/day_on_surface</item>
+
+        <!-- 状态栏颜色 -->
+        <item name="android:statusBarColor">@color/day_primary_variant</item>
+
+        <!-- 导航栏颜色（底部虚拟按键区域） -->
+        <item name="android:navigationBarColor">@color/day_background</item>
+
+        <!-- 错误色 -->
+        <item name="colorError">@color/color_error</item>
+
+        <!-- 分割线/描边 -->
+        <!-- <item name="colorOutline">@color/day_outline</item> -->
+
+        <item name="android:fontFamily">@font/genshin_zh_cn</item>
+
+    </style>
+
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/user_bn_menu_home"
+        android:title="首页"
+        android:icon="@drawable/icon_menu_home"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/user_bn_menu_list"
+        android:title="列表"
+        android:icon="@drawable/icon_menu_list"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/user_bn_menu_my"
+        android:title="我的"
+        android:icon="@drawable/icon_menu_my"
+        app:showAsAction="always"
+        />
+
+</menu>

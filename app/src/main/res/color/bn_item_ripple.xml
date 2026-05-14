@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 按下时：用金色做波纹（可加透明度） -->
+    <item android:state_pressed="true" android:alpha="0.25" android:color="?attr/colorSecondary" />
+
+    <!-- 默认透明 -->
+    <item android:color="@android:color/transparent" />
+
+</selector>

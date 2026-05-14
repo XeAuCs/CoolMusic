@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 夜间主题：深蓝紫 + 深蓝 + 深紫 + 金 -->
+    <style name="Theme.CoolMusic" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+
+        <!-- 主色：深蓝紫（Toolbar、主要按钮） -->
+        <item name="colorPrimary">@color/night_primary</item>
+        <item name="colorPrimaryVariant">@color/night_primary_variant</item>
+        <item name="colorOnPrimary">@color/night_on_primary</item>
+
+        <!-- 次要色：中紫（次要按钮、辅助元素） -->
+        <item name="colorSecondary">@color/night_secondary</item>
+        <item name="colorSecondaryVariant">@color/night_secondary_variant</item>
+        <item name="colorOnSecondary">@color/night_on_secondary</item>
+
+        <!-- 第三色（Material3 支持）：中蓝 -->
+        <!-- <item name="colorTertiary">@color/night_tertiary</item> -->
+        <!-- <item name="colorOnTertiary">@color/night_on_tertiary</item> -->
+
+        <!-- 背景色 -->
+        <item name="android:colorBackground">@color/night_background</item>
+        <item name="android:windowBackground">@color/night_background</item>
+
+        <!-- 表面色 -->
+        <item name="colorSurface">@color/night_surface</item>
+        <item name="colorOnSurface">@color/night_on_surface</item>
+
+        <!-- 状态栏颜色 -->
+        <item name="android:statusBarColor">@color/night_primary_variant</item>
+
+        <!-- 导航栏颜色 -->
+        <item name="android:navigationBarColor">@color/night_background</item>
+
+        <!-- 错误色 -->
+        <item name="colorError">@color/color_error</item>
+
+    </style>
+
+</resources>

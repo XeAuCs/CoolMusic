@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 选中：金色（来自 theme 的 colorSecondary） -->
+    <item android:state_checked="true" android:color="?attr/colorSecondary" />
+
+    <!-- 未选中：onSurface 但更淡一点 -->
+    <item android:alpha="0.65" android:color="?attr/colorOnSurface" />
+
+</selector>
