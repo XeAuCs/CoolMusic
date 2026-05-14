@@ -8,6 +8,12 @@
 - Gradle (Kotlin DSL)
 - SQLite
 
+## 📱 截图
+
+| | | | |
+| --- | --- | --- | --- |
+| ![](screenshots/Screenshot_2025-12-31-14-57-41-272_com.cool.music.png) | ![](screenshots/Screenshot_2025-12-31-14-59-15-396_com.cool.music.png) | ![](screenshots/Screenshot_2025-12-31-14-59-39-166_com.cool.music.png) | ![](screenshots/Screenshot_2025-12-31-15-15-17-405_com.cool.music.png) |
+
 ## ⚠️ 注意事项
 
 ### 修改 DBUtil.java 务必小心
